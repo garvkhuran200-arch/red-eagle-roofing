@@ -1,0 +1,81 @@
+.about {
+  padding-block: var(--space-9);
+  background: var(--color-paper);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-7);
+  align-items: center;
+}
+
+.copy {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.heading {
+  font-size: var(--text-2xl);
+  color: var(--color-ink);
+  max-width: 16ch;
+}
+
+.paragraph {
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-brown);
+  max-width: 52ch;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-3);
+  font-size: var(--text-sm);
+  color: var(--color-ink);
+}
+
+.listIcon {
+  flex-shrink: 0;
+  color: var(--color-red);
+  margin-top: 2px;
+}
+
+.imageWrap {
+  border: 1px solid var(--color-grey-line);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.blueprintArt {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* Text stays first in the DOM (SEO / accessibility priority) but swaps
+   to image-left, text-right at desktop for rhythm against the Hero
+   section's text-left, image-right layout. */
+@media (min-width: 880px) {
+  .grid {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: var(--space-8);
+  }
+
+  .imageWrap {
+    order: -1;
+  }
+
+  .heading {
+    font-size: var(--text-3xl);
+  }
+}

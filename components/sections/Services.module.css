@@ -1,0 +1,77 @@
+.services {
+  padding-block: var(--space-9);
+  background: var(--color-paper);
+}
+
+.header {
+  max-width: 60ch;
+  margin-bottom: var(--space-7);
+}
+
+.heading {
+  font-size: var(--text-2xl);
+  color: var(--color-ink);
+  max-width: 18ch;
+}
+
+.intro {
+  margin-top: var(--space-4);
+  font-size: var(--text-base);
+  line-height: var(--leading-normal);
+  color: var(--color-brown);
+}
+
+/* Spec-sheet style grid: hairline borders between cells, no shadows,
+   no rounded card containers — deliberately not the soft SaaS-card kit. */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-top: 1px solid var(--color-grey-line);
+  border-left: 1px solid var(--color-grey-line);
+}
+
+.card {
+  padding: var(--space-6) var(--space-5);
+  border-right: 1px solid var(--color-grey-line);
+  border-bottom: 1px solid var(--color-grey-line);
+}
+
+.iconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--color-ink);
+  color: var(--color-red);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--space-4);
+}
+
+.cardTitle {
+  font-size: var(--text-lg);
+  color: var(--color-ink);
+  margin-bottom: var(--space-2);
+}
+
+.cardDescription {
+  font-size: var(--text-sm);
+  line-height: var(--leading-normal);
+  color: var(--color-brown);
+}
+
+@media (min-width: 640px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 880px) {
+  .heading {
+    font-size: var(--text-3xl);
+  }
+
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
